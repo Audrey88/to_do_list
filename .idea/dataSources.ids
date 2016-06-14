@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - list_to_do@localhost" uuid="fe1c1489-d371-4dfd-a0fd-4bc16b4caa0e">
+    <database-info product="MySQL" version="5.5.49-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="list_to_do"/>
+      <table id="2" parent="1" name="categorie"/>
+      <table id="3" parent="1" name="priorite"/>
+      <table id="4" parent="1" name="tache"/>
+      <column id="5" parent="2" name="id_cat">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="categories">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id_cat</columns>
+        <primary>1</primary>
+      </key>
+      <column id="8" parent="3" name="id_prio">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="9" parent="3" name="priorite">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <key id="10" parent="3" name="PRIMARY">
+        <columns>id_prio</columns>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="4" name="id_tache">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="12" parent="4" name="id_categorie">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="13" parent="4" name="id_priorite">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="14" parent="4" name="Titre">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="15" parent="4" name="jour_limit">
+        <data-type>date</data-type>
+      </column>
+      <index id="16" parent="4" name="id_categorie">
+        <columns>id_categorie</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="17" parent="4" name="id_priorite">
+        <columns>id_priorite</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="18" parent="4" name="PRIMARY">
+        <columns>id_tache</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="4" name="tache_ibfk_1">
+        <columns>id_categorie</columns>
+        <ref-key>~.categorie.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="20" parent="4" name="tache_ibfk_2">
+        <columns>id_priorite</columns>
+        <ref-key>~.priorite.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

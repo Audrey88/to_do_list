@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - list_to_do@localhost" uuid="fe1c1489-d371-4dfd-a0fd-4bc16b4caa0e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>Toussaint</user-name>
+      <schema-pattern>list_to_do.*</schema-pattern>
+      <default-schemas>list_to_do.*</default-schemas>
+    </data-source>
+  </component>
+</project>
