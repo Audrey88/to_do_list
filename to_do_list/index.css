@@ -1,0 +1,35 @@
+
+#gauche {
+    display: inline-block;
+    float: left;
+    background-color: darkblue;
+    width: 400px;
+    color: white;
+    text-align: center;
+}
+
+#milieu {
+    display: inline-block;
+    float: center;
+    text-align: center;
+    margin-left: 100px;
+
+}
+
+#droite {
+    display: inline-block;
+    float: right;
+    background-color: red;
+    width: 400px;
+    height:500px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li :hover{
+    color: chartreuse;
+    background-color: darkgrey;
+}
