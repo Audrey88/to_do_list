@@ -13,7 +13,7 @@ $requete = $conn->query($sql);
 
 while ($result = mysqli_fetch_object($requete)) {
     echo(
-        "<li>" . "<strong>" . "<a href=\"page_liste.php?id_cat=" . $result->id_cat . "\">" . $result->categories . "</a>" . "</strong>" . "</li>" . "<br>");
+        "<li id='menu'>" . "<strong>" . "<a href=\"page_liste.php?id_cat=" . $result->id_cat . "\">" . $result->categories . "</a>" . "</strong>" . "</li>" . "<br>");
 }
 
 ?>

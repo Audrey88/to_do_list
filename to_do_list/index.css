@@ -2,7 +2,7 @@
 #gauche {
     display: inline-block;
     float: left;
-    background-color: darkblue;
+    background-color: royalblue;
     width: 400px;
     color: white;
     text-align: center;
@@ -23,13 +23,16 @@
     width: 400px;
     height:500px;
     text-align: center;
+    color: white;
 }
 
 ul {
     list-style-type: none;
+    text-decoration: none;
 }
 
-li :hover{
-    color: chartreuse;
+
+#menu :hover{
+    color: white;
     background-color: darkgrey;
 }

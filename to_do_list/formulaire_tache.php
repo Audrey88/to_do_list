@@ -65,6 +65,8 @@ else {
         <p>Catégorie:</p>
         <select name="catego" required>
             <?php
+            $sql = 'SELECT * from categorie';
+            $list = $conn->query($sql);
             while ($data = mysqli_fetch_object($list)) {
                 echo('<option value="' . $data->id_cat . '">' . $data->categories . '</option>');
             }

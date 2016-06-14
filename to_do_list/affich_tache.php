@@ -17,7 +17,7 @@ if (isset($_GET['id_cat'])) {
     }
 }
 else {
-    $sql = "SELECT * FROM tache";
+    $sql = "SELECT * FROM tache ORDER BY jour_limit ";
 
     $requete = $conn->query($sql);
 
